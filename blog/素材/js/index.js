@@ -124,7 +124,7 @@ function checkId(req, res) {
     req.on("end", function () {
         let getuser = querystring.parse(str);
         if (getuser.username == userList[0].username && getuser.pwd == userList[0].pwd) {
-            showList(res)
+            showlistmag(res)
         } else {
             res.writeHead(200, { "Content-Type": "text/html;charset=utf-8" });
             res.end("密码错误，请重新输入！");
