@@ -6,7 +6,7 @@ const querystring = require("querystring");
 
 http.createServer(function (req, res) {
     var urlPathName = url.parse(req.url).pathname;
-    console.log(urlPathName);
+    // console.log(urlPathName);
     // 获取路径的最后一个名称
     let fileName = path.basename(urlPathName);
     // 取得后缀名
@@ -158,7 +158,7 @@ function addCp(req, res) {
             "chapterId": chapterList.length + 1,
             "chapterName": content.title,
             "imgPath": "",
-            "chapterDes": content.content.substr(0, 8),
+            "chapterDes": content.content.substr(0, 8) + "...",
             "chapterContent": content.content,
             "publishTimer": day.getFullYear() + "-" + day.getMonth() + "-" + day.getDate(),
             "author": "admin",
